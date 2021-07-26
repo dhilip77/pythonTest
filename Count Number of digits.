@@ -1,0 +1,21 @@
+Created on Mon Jul 26 18:26:53 2021
+Every time you divide the input number by 10, 
+one digit get reduced and you need to maintain a count 
+of that until the input number reduced to 0. The count value is your answer.
+34567/10 = 3456 count = 1
+3456/10 = 345 count = 2
+345/10 = 34 count = 3
+34/10 = 3 count = 4
+3/10 = 0 count = 5
+
+@author: Dhilip.KumarTG
+"""
+digit = int(input())
+
+count = 0
+for x in str(digit):
+    val = digit / 10
+    if (val != 0):
+        count = count + 1
+        continue
+print(count)
