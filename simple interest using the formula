@@ -1,0 +1,21 @@
+"""
+Created on Mon Jul 26 17:43:46 2021
+
+Given the value of principal, interest and year. You can calculate 
+the simple interest using the formula
+Sample Interest = (principal * interest * year)/100
+Round the value to the nearest integer and print it.
+
+There will be 3 lines of numeric input - 
+'a' : principal which is of type float or double.
+'b' : interest which is of type integer. 
+'c' : year which is again of type integer.
+
+@author: Dhilip.KumarTG
+"""
+
+a = float(input())
+b = int(input())
+c = int(input())
+si = abs((a*b*c)/100)
+print(int(si))
