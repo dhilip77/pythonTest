@@ -1,0 +1,14 @@
+# what is a Narcissistic Number?
+
+def narcissistic():
+
+ # Write code here
+    var = (input())
+    tempo = 0
+
+    for i in range(len(var)):
+        tempo = tempo + pow(int(var[i]),int(len(var)))
+    if (tempo == int(var)):
+        print("True")
+    else:
+        print("False")
