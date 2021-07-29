@@ -1,0 +1,15 @@
+ # Write code here 
+    var = input()
+
+    bigcount=0
+    smallcount=0
+
+    for x in var:
+
+        if (x.isupper()==True):
+            bigcount+=1
+        elif (x.islower() ==True):
+            smallcount+=1
+        
+    print(bigcount)
+    print(smallcount)
