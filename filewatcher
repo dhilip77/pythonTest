@@ -1,0 +1,57 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Aug  4 14:33:18 2021
+
+@author: Dhilip.KumarTG
+"""
+
+import os
+import time
+#import json
+
+varf = input("Enter file path: \n")
+#File_to_watch = os.stat(val)
+
+
+def File_Size_Value(val):
+    
+    File_to_watch = os.stat(val)
+    ls = str(File_to_watch)
+    lt = (ls.split(","))
+    la = lt[8]
+    print("This is variable:",lt[8])
+    print("File ctme:",la[10:])
+    var = la[10:]
+    return (var)
+
+def check_file_size(File_size):
+    T_size = File_size
+    c_size = 0
+    if (T_size != 0):
+        print(T_size)
+        c_size =+ 1
+        return (T_size)
+    else:
+        print(T_size)
+        print(c_size)
+
+
+def Loop_check():
+    temp = 0
+    while True:
+        time.sleep(20)
+        ct = File_Size_Value(varf)
+        val = check_file_size(ct)
+        print(temp,type(temp))
+        if (int(val)== int(temp)):
+            temp = val
+            print(temp ,"=",val)
+            break
+        else:
+            temp = int(val)
+            print("total:",temp)
+            continue
+        
+        
+
+Loop_check()
