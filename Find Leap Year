@@ -2,12 +2,23 @@ def is_leap(year):
     leap = False
     
     # Write your logic here
-    val = year / 4
-    val2 = year / 100
-    if (year >=1900 and year <=100000):
-        if (isinstance(val, int) and isinstance(val2, int)):
-            return leap     
+    def is_leap(year):
+    leap = False
     
-    return leap
+    # Write your logic here
+    val = year % 4
+    val2 = year % 100
+    val3 = year % 400
+    if (year >=1900 and year <=100000):
+        if (val == 0):
+            if(val2 == 0):
+                if(val3 == 0):
+                    return True
+                else:
+                    return False
+            else:
+                return True
+        else:
+            return False    
 
 year = int(input())
