@@ -1,0 +1,18 @@
+"""
+@author: DhilipKumarTG
+most frequent char
+"""
+var = ["a","b","c","d","a","a","c","a","b","a","a"] 
+
+#var = ["a","b","b", "c","d"]
+c_num= { }
+
+for i in var:
+    #print(i)
+    c_num[i] = var.count(i)  
+
+mx_val = max(c_num.values())
+
+for k,j in c_num.items():
+    if j == mx_val:
+        print(k ,"=", j)
