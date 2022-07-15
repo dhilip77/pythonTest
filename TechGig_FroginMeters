@@ -1,0 +1,51 @@
+''' Read input from STDIN. Print your output to STDOUT '''
+    #Use input() to read input from STDIN and use print to write your output to STDOUT
+
+"""
+There are two frogs on a number line ready to jump in the positive direction (i.e, toward positive infinity). The first frog starts at location a1 and moves at a rate of b1 meters per jump. The second frog starts at location a2 and moves at a rate of b2 meters per jump. Given the starting locations and movement rates for each frog, can you determine if they'll ever land at the same location at the same time?
+Note: The two frogs must land at the same location after making the same number of jumps.
+
+
+Input Format
+It will be a string which contains four space-separated integers denoting the respective values of a1, b1, a2, b2.
+
+
+Constraints
+0 <= a1 , a2 <= 10000
+1 <= b1 <= 10000
+1 <= b2 <= 10000
+
+
+Output Format
+It will be a string which will return YES if they can land on the same location at the same time otherwise return NO.
+"""
+    
+def main():
+ 
+ # Write code here 
+
+    var= input()
+    #word = var.split()
+    a1 = int(var[0])
+    b1 = int(var[2])
+    a2 = int(var[4])
+    b2 = int(var[6])
+
+    a_val = a1+b1
+    b_val = a2+b2
+
+    if (a_val > b_val):
+        b_val *=2
+        if(b_val == a_val):
+            print("YES")
+        else:
+            print("NO")
+    else:
+        a_val *=2
+        if(a_val == b_val):
+            print("YES")
+        else:
+            print("NO")
+
+ 
+main()
